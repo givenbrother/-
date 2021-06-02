@@ -44,9 +44,9 @@ def runGame():
                 break
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_LEFT:
-                    person_dx = -5
+                    person_dx = -10
                 elif event.key == pygame.K_RIGHT:
-                    person_dx = 5
+                    person_dx = 10
             elif event.type == pygame.KEYUP:
                 if event.key == pygame.K_LEFT:
                     person_dx = 0
@@ -60,7 +60,7 @@ def runGame():
                 rect = pygame.Rect(bomb_image.get_rect())
                 rect.left = random.randint(0, size[0])
                 rect.top = -100
-                dy = random.randint(3, 9)
+                dy = random.randint(8, 15)
                 bombs.append({'rect': rect, 'dy': dy})
 
         person.left = person.left + person_dx
@@ -81,4 +81,5 @@ def runGame():
 
 
 runGame()
+
 pygame.quit()
