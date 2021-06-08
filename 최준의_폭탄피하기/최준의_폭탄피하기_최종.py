@@ -1,10 +1,9 @@
-import pygame  # 1. pygame 선언
+import pygame  
 import random
 import os
 
-pygame.init()  # 2. pygame 초기화
+pygame.init() 
 
-# 3. pygame에 사용되는 전역변수 선언
 
 BLACK = (0, 0, 0)
 size = [600, 800]
@@ -14,6 +13,8 @@ done = False
 clock = pygame.time.Clock()
 
 def runGame():
+
+
     bomb_image = pygame.image.load('폭탄 사진2 다이너마이트.png')
     bomb_image = pygame.transform.scale(bomb_image, (50, 50))
     bombs = []
